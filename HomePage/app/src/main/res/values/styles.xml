@@ -1,0 +1,60 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#004d40</item>
+        <item name="colorPrimaryDark">#00251a</item>
+        <item name="colorAccent">#39769b</item>
+    </style>
+
+
+    <style name="coll_toolbar_title" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textSize">20dp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+
+    <style name="MyTheme2" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#d81b60</item>
+        <item name="colorPrimaryDark">#a00037</item>
+        <item name="colorAccent">#ff5c8d</item>
+
+    </style>
+
+    <style name="MyTheme3" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">#aa00c7</item>
+        <item name="colorPrimaryDark">#e040fb</item>
+        <item name="colorAccent">#ff97ff</item>
+
+    </style>
+    <style name="MyTheme4" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">#156580</item>
+        <item name="colorPrimaryDark">#003c8f</item>
+        <item name="colorAccent">#5e9cf3</item>
+
+    </style>
+    <style name="MyTheme5" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">#d81b60</item>
+        <item name="colorPrimaryDark">#a00037</item>
+        <item name="colorAccent">#ff5c8d</item>
+
+    </style>
+    <style name="MyTheme6" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">#43a047</item>
+        <item name="colorPrimaryDark">#00701a</item>
+        <item name="colorAccent">#76d275</item>
+    </style>
+
+    <style name="MyTheme7" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">#f57c17</item>
+        <item name="colorPrimaryDark">#bc5100</item>
+        <item name="colorAccent">#ffb04c</item>
+    </style>
+
+    <style name="MyTheme8" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">#78909c</item>
+        <item name="colorPrimaryDark">#4b636e</item>
+        <item name="colorAccent">#a7c0cd</item>
+    </style>
+
+</resources>

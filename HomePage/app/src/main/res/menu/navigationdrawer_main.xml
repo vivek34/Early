@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/Originals"
+        android:icon="@drawable/ic_menu_camera"
+        android:title="Early Originals"/>
+    <item
+        android:id="@+id/Home"
+        android:icon="@drawable/ic_menu_share"
+        android:title="Home"/>
+    <item
+        android:id="@+id/LiveShows"
+        android:icon="@drawable/ic_menu_send"
+        android:title="Live Shows"/>
+    <item
+        android:id="@+id/Community"
+        android:icon="@drawable/ic_menu_share"
+        android:title="Community"/>
+</menu>
