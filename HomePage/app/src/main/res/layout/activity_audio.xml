@@ -1,0 +1,38 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context=".Activities.AudioActivity"
+              tools:ignore="NewApi">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Audio Recorder"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:visibility="visible"
+        tools:layout_editor_absoluteY="26dp"
+        tools:layout_editor_absoluteX="75dp"
+        android:id="@+id/title"
+        />
+
+    <ToggleButton
+        android:id="@+id/recordBtn"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:onClick="startRecording"
+        android:text="start_recording"
+        android:textOff="start_recording"
+        android:textOn="stop_recording"
+        />
+
+    <Button
+        android:id="@+id/playBtn"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:onClick="startPlaying"
+        android:text="PLAY"
+        />
+</LinearLayout>

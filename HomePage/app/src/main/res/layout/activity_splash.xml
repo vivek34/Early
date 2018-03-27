@@ -8,8 +8,7 @@
     android:layout_height="match_parent"
     android:background="#ffffff"
     android:orientation="horizontal"
-    android:theme="@style/MyTheme6"
-    tools:context="com.example.vivekpatel.homepage.Splash">
+    tools:context="com.example.vivekpatel.homepage.Activities.Splash">
 
 
     <ImageView

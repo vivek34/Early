@@ -2,16 +2,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
-
+              xmlns:whilu="http://schemas.android.com/apk/res-auto"
               android:background="?android:selectableItemBackground"
               android:orientation="vertical"
-              android:padding="5dp">
+    >
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="2dp">
-
+        android:padding="4dp">
 
         <TextView
             android:id="@+id/itemTitle"
@@ -23,20 +22,22 @@
             android:textStyle="bold"
             android:layout_gravity="center_vertical"
             android:layout_toLeftOf="@+id/btnMore"
-            android:text="Sample title"
-            android:textColor="@android:color/black"
+            android:text=""
+            android:textColor="@android:color/holo_green_dark"
             android:textSize="18sp" />
 
-        <Button
-            android:id="@+id/btnMore"
-            android:layout_width="wrap_content"
-            android:layout_height="42dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:text="more"
-            android:textColor="#ffffff" />
-
+        <com.github.whilu.library.CustomButton
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:text="MORE"
+        whilu:shape_type="circle"
+        android:id="@+id/btnMore"
+        whilu:round_radius="10dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        whilu:pressed_color="@color/pressed_color"
+        whilu:unpressed_color="@color/unpressed_color" />
 
     </RelativeLayout>
 

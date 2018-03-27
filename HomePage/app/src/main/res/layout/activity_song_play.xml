@@ -5,7 +5,7 @@
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"
               android:theme="@style/MyTheme4"
-              android:background="#000000">
+              android:background="#330006">
 
     <LinearLayout
         android:id="@+id/song_play"
@@ -13,20 +13,71 @@
         android:layout_height="wrap_content"
         android:layout_weight="20"
         android:orientation="vertical"
-        android:background="#124aed">
-    </LinearLayout>
+        android:background="#DBF9F4">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="vertical">
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <ProgressBar
+                android:layout_marginLeft="140dp"
+                android:layout_gravity="center"
+                android:layout_width="80dp"
+                android:layout_height="80dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="vertical">
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="90dp"
+                android:background="@drawable/backward"
+                android:id="@+id/backward"
+               />
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/play"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/play_pause"
+                />
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/forward"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/forward"
+              />
+        </LinearLayout>
+
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/description_song"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="2"
-        android:background="#124aed" >
+        android:layout_weight="11.5"
+        android:background="#515b3a" >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -44,7 +95,7 @@
 
             <TextView
                 android:layout_marginTop="5dp"
-                android:textSize="15sp"
+                android:textSize="17sp"
                 android:layout_marginLeft="15dp"
                 android:textColor="#ffffff"
                 android:text="This  is  something  somthing  This  is  something  somthing  This  is  something  somthing  This  is  something  somthing  This  is  something  somthing  This  is  something  somthing"
@@ -58,6 +109,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
+        android:background="#5F7367"
         android:layout_height="40dp">
 
         <TextView
@@ -76,8 +128,8 @@
         android:id="@+id/artist_image"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="3"
-        android:background="#ae4345"
+        android:layout_weight="7"
+        android:background="#2F394D"
         >
         <LinearLayout
             android:layout_width="match_parent"

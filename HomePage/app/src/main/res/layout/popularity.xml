@@ -3,7 +3,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:theme="@style/MyTheme5"
     android:layout_height="match_parent">
 
     <android.support.v7.widget.RecyclerView

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:orientation="vertical"
+        >
+    </LinearLayout>
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="30dp"
+        android:src="@drawable/red_heart"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:orientation="vertical"
+        >
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:text="This is my Main Title"
+        android:layout_marginLeft="20dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:orientation="vertical"
+        >
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textColor="#ffffff"
+        android:text="This is my Subtitle"
+        android:layout_marginLeft="20dp"/>/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:orientation="vertical">
+</LinearLayout>
+
+        <TextView
+            android:textColor="#ffffff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="This  album  is  about  the  person  who  didnt  have  any  platform  to   show  his   talent  somehow  got  Early  to  rise"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:orientation="vertical">
+         </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="."/>
+
+</LinearLayout>

@@ -4,12 +4,12 @@
     android:id="@+id/card_view"
     card_view:cardCornerRadius="4dp"
     android:layout_margin="5dp"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
      <LinearLayout
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:layout_height="90dp"
          android:orientation="horizontal">
 
          <LinearLayout
@@ -19,63 +19,47 @@
              android:layout_weight="1">
 
              <ImageView
+                 android:layout_marginLeft="20dp"
                  android:layout_width="80dp"
-                 android:layout_height="70dp"
-                 card_view:srcCompat="@drawable/quora"
+                 android:layout_height="80dp"
+                 card_view:srcCompat="@drawable/show"
                  android:id="@+id/thumbnail"
                  />
+         </LinearLayout>
+         <LinearLayout
+             android:layout_width="20dp"
+             android:layout_height="90dp"
+             android:orientation="vertical">
          </LinearLayout>
 
          <LinearLayout
              android:orientation="vertical"
              android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
+             android:layout_height="90dp"
+             android:layout_marginRight="10dp"
              android:layout_weight="1">
 
              <TextView
+                 android:layout_marginTop="10dp"
                  android:text="Quora Qaagaz"
-                 android:textSize="25sp"
-                 android:layout_width="225dp"
-                 android:layout_height="wrap_content"
+                 android:textSize="15sp"
+                 android:layout_width="200dp"
+                 android:layout_height="20dp"
                  android:id="@+id/songtitle"/>
 
              <TextView
                  android:text="Session 1-Episode 2"
-                 android:textSize="18sp"
-                 android:layout_width="225dp"
-                 android:layout_height="wrap_content"
+                 android:textSize="15sp"
+                 android:layout_width="200dp"
+                 android:layout_height="20dp"
                  android:id="@+id/song_des"/>
 
              <TextView
                  android:text="2:10 min"
-                 android:textSize="18sp"
+                 android:textSize="15sp"
                  android:layout_width="200dp"
-                 android:layout_height="wrap_content"
+                 android:layout_height="20dp"
                  android:id="@+id/time"/>
          </LinearLayout>
-         <LinearLayout
-             android:orientation="vertical"
-             android:layout_width="match_parent"
-             android:layout_marginLeft="5dp"
-             android:layout_weight="100"
-             android:layout_height="wrap_content">
-
-             <ImageView
-                 android:layout_width="30dp"
-                 android:layout_gravity="center_horizontal"
-                 android:layout_height="wrap_content"
-                 card_view:srcCompat="@drawable/red_heart"
-                 android:id="@+id/likes"/>
-
-             <TextView
-                 android:text="22.4k"
-                 android:layout_gravity="center_horizontal"
-                 android:layout_width="wrap_content"
-                 android:layout_height="wrap_content"
-                 android:id="@+id/like"/>
-         </LinearLayout>
-
-
-
      </LinearLayout>
 </android.support.v7.widget.CardView>
