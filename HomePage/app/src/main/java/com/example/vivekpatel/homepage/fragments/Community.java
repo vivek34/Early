@@ -13,6 +13,8 @@ import android.view.ViewGroup;
 //import com.example.vivekpatel.homepage.Adapters.CommuntiyAdapter;
 
 //import com.example.vivekpatel.homepage;
+import com.example.vivekpatel.homepage.Activities.MainScreen;
+import com.example.vivekpatel.homepage.Adapters.CommunityAdapter;
 import com.example.vivekpatel.homepage.R;
 import com.example.vivekpatel.homepage.model.CommunityInfo;
 
@@ -27,7 +29,7 @@ public class Community extends Fragment {
 
 
     private RecyclerView recyclerView;
-   // private CommuntiyAdapter adapter;
+    private CommunityAdapter adapter;
     private List<CommunityInfo> detailList;
 
 
@@ -42,14 +44,15 @@ public class Community extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        recyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
+        recyclerView = (RecyclerView) view.findViewById(R.id.comunity_data);
         detailList = new ArrayList<>();
-     //   adapter = new CommuntiyAdapter(getActivity(),detailList);
+        prepareSongs();
+
+       adapter = new CommunityAdapter((MainScreen) getActivity(), detailList);
         RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(getActivity(), 1);
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
-      //  recyclerView.setAdapter(adapter);
-        prepareSongs();
+        recyclerView.setAdapter(adapter);
     }
 
     private void prepareSongs() {

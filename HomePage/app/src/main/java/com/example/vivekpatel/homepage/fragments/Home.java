@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.vivekpatel.homepage.Activities.MainScreen;
 import com.example.vivekpatel.homepage.Adapters.MainScreenSongAdapter;
 import com.example.vivekpatel.homepage.Adapters.TrendingAdapter;
 import com.example.vivekpatel.homepage.R;
@@ -26,6 +27,10 @@ import java.util.List;
  * Created by VIVEK PATEL on 3/18/2018.
  */
 public class Home extends android.support.v4.app.Fragment {
+
+
+    ArrayList<SectionDataModel> SampleData;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -36,5 +41,37 @@ public class Home extends android.support.v4.app.Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        SampleData = new ArrayList<>();
+
+        Shows_Data();
+
+        RecyclerView my_recycler_view = (RecyclerView) view.findViewById(R.id.my_recycler_view);
+        my_recycler_view.setHasFixedSize(true);
+        TrendingAdapter adapter = new TrendingAdapter((MainScreen) getActivity(),SampleData);
+        my_recycler_view.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
+        my_recycler_view.setAdapter(adapter);
+    }
+
+
+    public void Shows_Data() {
+        for (int i = 1; i <= 3; i++) {
+            SectionDataModel dm = new SectionDataModel();
+            if (i == 1) {
+                dm.setHeaderTitle("LATEST SHOWS");
+            }
+            if (i == 2) {
+                dm.setHeaderTitle("POPULAR SHOWS");
+            }
+            if (i == 3) {
+                dm.setHeaderTitle("LIVE SHOWS");
+            }
+            ArrayList<SingleItemModel> singleItem = new ArrayList<SingleItemModel>();
+            for (int j = 0; j <= 5; j++) {
+                singleItem.add(new SingleItemModel("Item " + j, "URL " + j));
+            }
+            dm.setAllItemsInSection(singleItem);
+            SampleData.add(dm);
+
+        }
     }
 }
