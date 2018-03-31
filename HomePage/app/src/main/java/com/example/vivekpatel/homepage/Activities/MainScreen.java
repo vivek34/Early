@@ -33,11 +33,8 @@ import java.util.ArrayList;
 
 public class MainScreen extends AppCompatActivity {
 
-    private Toolbar toolbar;
-
-    ImageView img;
     NavigationView navigationView;
-    ArrayList<SectionDataModel> SampleData;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,13 +46,10 @@ public class MainScreen extends AppCompatActivity {
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("Home");
-        SampleData = new ArrayList<SectionDataModel>();
-        Shows_Data();
-        RecyclerView my_recycler_view = (RecyclerView)findViewById(R.id.my_recycler_view);
-        my_recycler_view.setHasFixedSize(true);
-        TrendingAdapter adapter = new TrendingAdapter(this,SampleData);
-        my_recycler_view.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
-        my_recycler_view.setAdapter(adapter);
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction().add(R.id.flContent, new Home()).commit();
+
         navigationView = (NavigationView) findViewById(R.id.nvView);
         setupDrawerContent(navigationView);
     }
@@ -69,27 +63,7 @@ public class MainScreen extends AppCompatActivity {
             super.onBackPressed();
         }
     }
-    public void Shows_Data() {
-        for (int i = 1; i <= 3; i++) {
-            SectionDataModel dm = new SectionDataModel();
-            if (i == 1) {
-                dm.setHeaderTitle("LATEST SHOWS");
-            }
-            if (i == 2) {
-                dm.setHeaderTitle("POPULAR SHOWS");
-            }
-            if (i == 3) {
-                dm.setHeaderTitle("LIVE SHOWS");
-            }
-            ArrayList<SingleItemModel> singleItem = new ArrayList<SingleItemModel>();
-            for (int j = 0; j <= 5; j++) {
-                singleItem.add(new SingleItemModel("Item " + j, "URL " + j));
-            }
-            dm.setAllItemsInSection(singleItem);
-            SampleData.add(dm);
 
-        }
-    }
     private void setupDrawerContent(NavigationView navigationView) {
         navigationView.setNavigationItemSelectedListener(
                 new NavigationView.OnNavigationItemSelectedListener() {
@@ -110,15 +84,27 @@ public class MainScreen extends AppCompatActivity {
         switch (id) {
             case R.id.Originals:
                 Log.d("Vivek","clicked");
+
+                getSupportActionBar().setTitle("Originals");
+
                 fragmentClass = Originals.class;
                 break;
             case R.id.Home:
+
+                getSupportActionBar().setTitle("Home");
+
                 fragmentClass = Home.class;
                 break;
             case R.id.LiveShows:
+
+                getSupportActionBar().setTitle("Live Shows");
+
                 fragmentClass = LiveShows.class;
                 break;
             case R.id.Community:
+                
+                getSupportActionBar().setTitle("Community");
+
                 fragmentClass = Community.class;
         }
         try {
